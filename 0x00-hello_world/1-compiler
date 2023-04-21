@@ -1,2 +1,0 @@
-#!/bin/bash
-export CFILE=1-main.c ; ./1-compiler
