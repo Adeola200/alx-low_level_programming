@@ -1,7 +1,3 @@
-/*
- * File: 100-print_comb3.c
- * Auth: Adetoro Adeola
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -10,22 +6,36 @@
  *
  * Return: Always 0
  */
+
 int main(void)
 {
-	int dig_1, dig_2;
-	for (dig_1 = 0; dig_2 < 9; dig_1++)
-	{
-		for (dig_2 = dig_1 + 1; dig_2 < 10; dig_2++)
-		{
-			putchar((dig_1 % 10) + '0');
-			putchar((dig_2 % 10) + '0');
-			if (dig_1 == 8 && dig_2 == 9)
-				continue;
+	int i = '0';
+	int j = '0';
 
-			putchar(',');
-			putchar(' ');
+	while (i <= '9')
+	{
+		while (j <= '9')
+		{
+			if (!(i > j) || i == j)
+			{
+				putchar(i);
+				putchar(j);
+				if (i == '8' && j == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			j++;
 		}
+		j = '0';
+		i++;
+
+
 	}
-	putchar('\n');
-	return (0);
+return (0);
 }
