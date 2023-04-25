@@ -1,33 +1,37 @@
 #include <stdio.h>
 /**
   *main - print all possible combinations of a pair of two digit numbers, without any repetition
-  *
   * Return: 0
   */
 
 int main(void)
 {
-	int i, j;
+	int firstDigit = 0, secondDigit;
 
-	for (i = 0; <= 99; i++)
+	while (firstDigit <= 99)
 	{
-		for (j = 0; j <= 99; j++)
+		secondDigit = firstDigit;
+		while (secondDigit <= 99)
 		{
-			if (i < j && i != j)
+			if (secondDigit != firstDigit)
 			{
-				putchar((i / 10) + '0');
-				putchar((i % 10) + '0');
+				putchar((firstDigit / 10) + 48);
+				putchar((firstDigit % 10) + 48);
 				putchar(' ');
-				putchar((j / 10) + '0');
-				putchar((j % 10) + '0');
-			        if (i != 98 || j != 99)
+				putchar((secondDigit / 10) + 48);
+				putchar((secondDigit % 10) + 48);
+
+				if (firstDigit != 98 || secondDigit != 99)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
+			secondDigit++;
 		}
+		firstDigit++;
 	}
 	putchar('\n');
 	return (0);
 }
+
