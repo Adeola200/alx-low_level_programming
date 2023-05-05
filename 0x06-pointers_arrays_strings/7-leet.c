@@ -3,10 +3,10 @@
 /**
  * leet - function that encodes a string into 1337
  * letters a and A are replaced by 4.
- * Letters e and E should be replaced by 3
- * Letters o and O should be replaced by 0
- * Letters t and T should be replaced by 7
- * Letters l and L should be replaced by 1
+ * Letters e and E are replaced by 3
+ * Letters o and O are replaced by 0
+ * Letters t and T are replaced by 7
+ * Letters l and L are be replaced by 1
  * @s: pointer to string
  *
  * Return: pointer to s.
@@ -16,7 +16,7 @@ char *leet(char *s)
 {
 	int string_length, leetCount;
 	char leetLetters[] = "aAeEoOtTlL";
-	char leetNums[] = "443300771";
+	char leetNums[] = "4433007711";
 
 /* scan through string */
 	string_length = 0;
