@@ -5,7 +5,7 @@
  * alloc_grid - ...
  * @width: ...
  * @height: ...
- * Return: ...
+ * Return: Always 0
  */
 int **alloc_grid(int width, int height)
 {
@@ -40,7 +40,7 @@ int **alloc_grid(int width, int height)
 
 	for (c = 0; c < height; c++)
 	{
-		for (d = 0; d < width; c++)
+		for (d = 0; d < width; d++)
 		{
 			i[c][d] = 0;
 		}
